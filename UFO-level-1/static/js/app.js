@@ -108,18 +108,52 @@ fulltable()
  //======================================================================
 
 
+  // Select the table
+//  var tabla = d3.select("tbody");
+//  tabla.on("submit",fulltable);
 
 
 //This part is to reset filters and display again full table
  //======================================================================
  // Select the Filter all button.
+ var fecha = d3.select("#datetime");
  var button2 = d3.select("#filter-btn2");
- // Select the table
- var tabla = d3.select("tbody");
+ // Create event handlers for clicking the button 
+ button2.on("click", someFunc);
+
  
- // Create event handlers for clicking the button or pressing the enter key
- button2.on("click", fulltable);
- tabla.on("submit",fulltable);
+
+ function someFunc() {
+  fulltable();
+  allcero();
+  myFunction2();
+  
+}
+
+
+ 
+
+function myFunction2() {
+  var myCollection = document.getElementsByTagName("input");
+  var i;
+  for (i = 0; i < myCollection.length; i++) {
+    myCollection[i].text = "";
+    console.log(myCollection[i].text);
+
+  }
+}
+
+
+
+
+function allcero(){
+  console.log("llego aqui");
+ 
+  // fecha.text("");
+  var fecha1 =fecha.property("value")
+  console.log(fecha1)
+  document.getElementById("datetime").innerHTML="xxxx"
+}
  
  
 //  function clear(){
@@ -128,30 +162,6 @@ fulltable()
 
 // function myFunction() {
 // 	document.getElementById("datetime").reset();
-//   }
-
-// function allcero(){
-	console.log("llego aqui")
-	var inputElement1a = d3.select("#datetime");
-	var inputElement2a = d3.select("#ciudad");
-	var inputElement3a = d3.select("#estado");
-	var inputElement4a = d3.select("#pais");
-	var inputElement5a = d3.select("#forma");
-	var inputValue1a = inputElement1a.property("value");
-	var inputValue2a = inputElement2a.property("value");
-	var inputValue3a = inputElement3a.property("value");
-	var inputValue4a = inputElement4a.property("value");
-	var inputValue5a = inputElement5a.property("value");
-	
-	
-	
-	
-	console.log(inputValue2a.text)
-	// inputElement2a.html("");
-	// inputElement3a.html("");
-	// inputElement4a.html("");
-	// inputElement5a.html("");
-
 //   }
 
 
