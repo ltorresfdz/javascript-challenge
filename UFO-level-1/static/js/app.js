@@ -102,5 +102,24 @@ fulltable()
  //======================================================================
 
 
+//This part is to reset filters and display again full table
+ //======================================================================
+ var button2 = d3.select("#filter-btn2");
+ // Select the table
+ var tabla = d3.select("tbody");
+ // Create event handlers for clicking the button or pressing the enter key
+ button2.on("click", fulltable,allcero);
+ tabla.on("submit",fulltable,allcero);
 
-
+ function allcero(){
+ var inputElement1 = d3.select("#datetime");
+ var inputElement2 = d3.select("#ciudad");
+ var inputElement3 = d3.select("#estado");
+ var inputElement4 = d3.select("#pais");
+ var inputElement5 = d3.select("#forma");
+ var inputElement1 = "";
+ var inputElement2 = "";
+ var inputElement3 = "";
+ var inputElement4 = "";
+ var inputElement5 = "";
+ }
