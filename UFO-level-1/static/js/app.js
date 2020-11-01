@@ -122,11 +122,10 @@ fulltable()
  button2.on("click", someFunc);
 
  
-
  function someFunc() {
   fulltable();
-  allcero();
   myFunction2();
+  // allcero();
   
 }
 
@@ -137,23 +136,25 @@ function myFunction2() {
   var myCollection = document.getElementsByTagName("input");
   var i;
   for (i = 0; i < myCollection.length; i++) {
-    myCollection[i].text = "";
-    console.log(myCollection[i].text);
+    myCollection[i].value = "";
+    console.log(myCollection[i]);
+    console.log(myCollection[i].value);
 
   }
 }
 
 
+// These are the function that I created to clear the text, but didn't work ok.bottom
+//====================================================================================
 
-
-function allcero(){
-  console.log("llego aqui");
+// function allcero(){
+//   console.log("llego aqui");
  
-  // fecha.text("");
-  var fecha1 =fecha.property("value")
-  console.log(fecha1)
-  document.getElementById("datetime").innerHTML="xxxx"
-}
+//   // fecha.text("");
+//   var fecha1 =fecha.property("value")
+//   console.log(fecha1)
+//   document.getElementById("datetime").innerHTML=""
+// }
  
  
 //  function clear(){
@@ -165,7 +166,3 @@ function allcero(){
 //   }
 
 
-
-
-  
-  
