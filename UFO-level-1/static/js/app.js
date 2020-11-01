@@ -81,7 +81,14 @@ fulltable()
 		}
    //------------------------------
   
-	 console.log(filteredData);
+   console.log(filteredData);
+   
+  // get an alert message if there is no information with the selected filters
+  if (filteredData.length === 0) {
+    alert("There is no ufo information for that filter info");
+  }
+
+
 	// clear the existing output
     tabla.html("");
 
