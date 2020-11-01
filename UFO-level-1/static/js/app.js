@@ -8,6 +8,7 @@ var tableData = data;
 // ufo values (datetime, city, state,country,shape,duration, comments)
 //======================================================================
 
+function fulltable(){
   var tbody = d3.select("tbody");
   tableData.forEach(function(ufo) {
     // console.log(ufo);
@@ -20,7 +21,9 @@ var tableData = data;
       cell.text(value);
     });
   });
+}
 
+fulltable()
 
 //This part is to filter using all keys
  //======================================================================
@@ -76,10 +79,7 @@ var tableData = data;
 	if (inputValue5 !== "") {
 		var filteredData = filteredData.filter(tableData => tableData.shape === inputValue5);
 		}
-
-
-
-	//------------------------------
+   //------------------------------
   
 	 console.log(filteredData);
 	// clear the existing output
@@ -98,7 +98,8 @@ var tableData = data;
 	   cell.text(value);
 	    });
         });
-     }
+	 }
+ //======================================================================
 
 
 
