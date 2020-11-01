@@ -102,41 +102,57 @@ fulltable()
  //======================================================================
 
 
+
+
 //This part is to reset filters and display again full table
  //======================================================================
  var button2 = d3.select("#filter-btn2");
  // Select the table
  var tabla = d3.select("tbody");
+ 
  // Create event handlers for clicking the button or pressing the enter key
  button2.on("click", fulltable);
- 
  tabla.on("submit",fulltable);
  
- var inputValue =""
- d3.selectAll("li").on("click", function() {
-	// you can select the element just like any other selection
-	d3.select("li>input").text(inputValue);
-  });
-
+//  myFunction()
 
 
  
+ 
+//  function clear(){
+// 	document.getElementById('datetime').value = null
+// }
 
+// function myFunction() {
+// 	document.getElementById("datetime").reset();
+//   }
 
-
-
-//  function allcero(){
-// 	var inputElement1a = d3.select("#datetime");
-// 	var inputElement2a = d3.select("#ciudad");
-// 	var inputElement3a = d3.select("#estado");
-// 	var inputElement4a = d3.select("#pais");
-// 	var inputElement5a = d3.select("#forma");
-// 	inputElement1a.html("");
-// 	inputElement2a.html("");
-// 	inputElement3a.html("");
-// 	inputElement4a.html("");
-// 	inputElement5a.html("");
+// function allcero(){
+	console.log("llego aqui")
+	var inputElement1a = d3.select("#datetime");
+	var inputElement2a = d3.select("#ciudad");
+	var inputElement3a = d3.select("#estado");
+	var inputElement4a = d3.select("#pais");
+	var inputElement5a = d3.select("#forma");
+	var inputValue1a = inputElement1a.property("value");
+	var inputValue2a = inputElement2a.property("value");
+	var inputValue3a = inputElement3a.property("value");
+	var inputValue4a = inputElement4a.property("value");
+	var inputValue5a = inputElement5a.property("value");
+	
+	
+	
+	
+	console.log(inputValue2a.text)
+	// inputElement2a.html("");
+	// inputElement3a.html("");
+	// inputElement4a.html("");
+	// inputElement5a.html("");
 
 //   }
-//   allcero()
+
+
+
+
+  
   
