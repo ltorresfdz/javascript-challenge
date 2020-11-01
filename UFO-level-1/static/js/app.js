@@ -41,17 +41,22 @@ var tableData = data;
    var inputElement1 = d3.select("#datetime");
    var inputElement2 = d3.select("#ciudad");
    var inputElement3 = d3.select("#estado");
+   var inputElement4 = d3.select("#pais");
+   var inputElement5 = d3.select("#forma");
  
    // Get the value property of the input element
    var inputValue1 = inputElement1.property("value");
    var inputValue2 = inputElement2.property("value");
    var inputValue3 = inputElement3.property("value");
-   
+   var inputValue4 = inputElement4.property("value");
+   var inputValue5 = inputElement5.property("value");
  
    // Print the value to the console
    console.log(inputValue1);
    console.log(inputValue2);
    console.log(inputValue3);
+   console.log(inputValue4);
+   console.log(inputValue5);
    
    // Iterate through each ufo object
    //---------------------------------------------
@@ -64,8 +69,13 @@ var tableData = data;
 	} 
 	if (inputValue3 !== "") {
 		var filteredData = filteredData.filter(tableData => tableData.state === inputValue3);
-		} 
-
+	}
+	if (inputValue4 !== "") {
+		var filteredData = filteredData.filter(tableData => tableData.country === inputValue4);
+	}
+	if (inputValue5 !== "") {
+		var filteredData = filteredData.filter(tableData => tableData.shape === inputValue5);
+		}
 
 
 
