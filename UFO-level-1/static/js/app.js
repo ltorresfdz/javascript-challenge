@@ -99,8 +99,7 @@ fulltable()
 	 var row = tbody.append("tr");
 	 Object.entries(ufo).forEach(function([key, value]) {
 	 //   console.log(key, value);
-	   // Append a cell to the row for each value
-	   // in the weather report object
+	   // Append a cell to the row for each value in the ufo  object
 	   var cell = row.append("td");
 	   cell.text(value);
 	    });
@@ -113,6 +112,7 @@ fulltable()
 
 //This part is to reset filters and display again full table
  //======================================================================
+ // Select the Filter all button.
  var button2 = d3.select("#filter-btn2");
  // Select the table
  var tabla = d3.select("tbody");
@@ -120,10 +120,6 @@ fulltable()
  // Create event handlers for clicking the button or pressing the enter key
  button2.on("click", fulltable);
  tabla.on("submit",fulltable);
- 
-//  myFunction()
-
-
  
  
 //  function clear(){
